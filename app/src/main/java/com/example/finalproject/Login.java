@@ -40,7 +40,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         this.fragmentManager.beginTransaction().replace(R.id.frame_layout, this.login).commit();
         this.register_state = false;
 
-        Login.db = openOrCreateDatabase("WorkoutAppV4",MODE_PRIVATE,null);
+        Login.db = openOrCreateDatabase("WorkoutAppV5",MODE_PRIVATE,null);
         Login.db.execSQL("CREATE TABLE IF NOT EXISTS user" +
                 "(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, mail TEXT, login TEXT, password TEXT)");
         Login.db.execSQL("CREATE TABLE IF NOT EXISTS exercise" +
